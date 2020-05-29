@@ -3,7 +3,7 @@ const uuid = require('uuid');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 8080
 
 const sessionId = uuid.v4();
 
@@ -50,7 +50,7 @@ async function runSample(msg,projectId = 'chatbotspardha-qvdowa') {
 
   // Create a new session
   const sessionClient = new dialogflow.SessionsClient({
-    keyFilename:"C:/Users/krish/Downloads/Spardha/Spardha/ChatbotSpardha-7670a67c0787.json"
+    keyFilename:"/ChatbotSpardha-7670a67c0787.json"
   });
   const sessionPath = sessionClient.sessionPath(projectId, sessionId);
 
