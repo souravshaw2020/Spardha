@@ -3,7 +3,7 @@ const uuid = require('uuid');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 5000;
 
 const sessionId = uuid.v4();
 
@@ -22,6 +22,10 @@ app.use(function (req, res, next) {
   // Pass to next layer of middleware
   next();
 });
+
+/*app.post('/',function(req,res){
+  res.sendFile(__dirname+"/"+"bot.html");
+})*/
 
 app.post('/send-msg',(req,res)=>{
   runSample(req.body.MSG).then(data=>{
@@ -50,7 +54,7 @@ async function runSample(msg,projectId = 'chatbotspardha-qvdowa') {
 
   // Create a new session
   const sessionClient = new dialogflow.SessionsClient({
-    keyFilename:"/ChatbotSpardha-7670a67c0787.json"
+    keyFilename:"D:/Spardha/Spardha/ChatbotSpardha-7670a67c0787.json"
   });
   const sessionPath = sessionClient.sessionPath(projectId, sessionId);
 

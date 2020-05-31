@@ -78,7 +78,7 @@ function serverMessage(response2) {
 
 function fetchmsg(){
 
-    var url = '/send-msg';
+    var url = 'http://localhost:5000/send-msg';
      
      const data = new URLSearchParams();
      for (const pair of new FormData(document.getElementById("mymsg"))) {
