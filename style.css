@@ -50,7 +50,7 @@ h1 span{
     flex: 0 1 45px;
     position: relative;
     z-index: 2;
-    background: #0d68e048;
+    background: #023e8bb7;
     color: #ffffff;
     text-align: left;
     padding: 10px 10px 10px 50px;
@@ -66,11 +66,11 @@ h1 span{
   .chat-title h1
   {
     color: #ffffff;
-      text-shadow: 1px 2px 5px #3d93da;
+      text-shadow: 1px 2px 5px #075594;
   }
   .chat-title h2 
   {
-    color: #3d93dab6;
+    color: #ecf0f3b6;
     font-size: 20px;
     text-shadow: 1px 1px 2px #053863b7;
     margin-left: 50px;
@@ -86,17 +86,14 @@ h1 span{
       overflow: hidden;
       margin: 0;
       padding: 0;
-      background: pink;
-	    background: -webkit-linear-gradient(120deg, #515ECF 4%, #9B36B7 30%, #D92E7F 62%);
-	    background: linear-gradient(120deg, #ff3be7 14%, #ff3be7 36%, #b803ffa9 64%);
-	    -webkit-background-clip: text;
-	    -webkit-text-fill-color: transparent;
-      border: 2px solid #9514eb80;
+      color: #0bc6ff;
+      border: 2px solid #f0eaf5a9;
   }
   .messages
   {
       flex: 1 1 auto;
-      color: #ffffffce;
+      color: #030303c0;
+      background: #fdfdfdb0;
       overflow: hidden;
       position: relative;
       width: 100%;
@@ -115,7 +112,7 @@ h1 span{
     float: left;
     padding: 6px 10px 7px;
     border-radius: 10px 10px 10px 0;
-    background: linear-gradient(120deg, #6a23a5be, #1385d1a6);
+    background: #81818167;
     margin: 8px 0;
     font-size: 18px;
     line-height: 1.5;
@@ -135,7 +132,7 @@ h1 span{
     content: '';
     position: absolute;
     bottom: -6px;
-    border-top: 6px solid #6a23a5be;
+    border-top: 6px solid #81818167;
     left: 0;
     border-right: 7px solid transparent;
   }
@@ -152,19 +149,15 @@ h1 span{
     overflow: hidden;
     margin: 0;
     padding: 0;
-    background: pink;
-	  background: -webkit-linear-gradient(120deg, #515ECF 4%, #9B36B7 30%, #D92E7F 62%);
-	  background: linear-gradient(120deg, #ff3be7 14%, #ff3be7 36%, #b803ffa9 64%);
-	  -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent;
-    border: 2px solid #9514eb80;
+    color: #0bc6ff;
+    border: 2px solid #146aeb80;
   }
   .messages .message.message-personal
   {
     float: right;
-    color: #ffffff;
+    color: #030303c0;
     text-align: right;
-    background: linear-gradient(120deg, #248A52, #257287);
+    background: #3498dbe8 ;
     border-radius: 10px 10px 0 10px;
   }
   .messages .message.message-personal::before
@@ -173,7 +166,7 @@ h1 span{
     right: 0;
     border-right: none;
     border-left: 5px solid transparent;
-    border-top: 4px solid #257287;
+    border-top: 4px solid #3498dbe8;
     bottom: -4px;
   }
   .messages .message:last-child
