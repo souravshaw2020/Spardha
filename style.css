@@ -86,7 +86,7 @@ h1 span{
       overflow: hidden;
       margin: 0;
       padding: 0;
-      color: #0bc6ff;
+      color: #e0dedec2;
       border: 2px solid #f0eaf5a9;
   }
   .messages
@@ -112,13 +112,13 @@ h1 span{
     float: left;
     padding: 6px 10px 7px;
     border-radius: 10px 10px 10px 0;
-    background: #81818167;
+    background: #e2e1e1d8;
     margin: 8px 0;
     font-size: 18px;
     line-height: 1.5;
     margin-left: 35px;
     position: relative;
-    text-shadow: 0 1px 1px #00000033;
+    text-shadow: 0 1px 1px #030303c0;
   }
   .messages .message .timestamp
   {
@@ -132,7 +132,7 @@ h1 span{
     content: '';
     position: absolute;
     bottom: -6px;
-    border-top: 6px solid #81818167;
+    border-top: 6px solid #e2e1e1d8;
     left: 0;
     border-right: 7px solid transparent;
   }
@@ -149,15 +149,15 @@ h1 span{
     overflow: hidden;
     margin: 0;
     padding: 0;
-    color: #0bc6ff;
+    color: #2d7de2;
     border: 2px solid #146aeb80;
   }
   .messages .message.message-personal
   {
     float: right;
-    color: #030303c0;
+    color: #ffffff;
     text-align: right;
-    background: #3498dbe8 ;
+    background: #2d7de2;
     border-radius: 10px 10px 0 10px;
   }
   .messages .message.message-personal::before
@@ -166,7 +166,7 @@ h1 span{
     right: 0;
     border-right: none;
     border-left: 5px solid transparent;
-    border-top: 4px solid #3498dbe8;
+    border-top: 4px solid #2d7de2;
     bottom: -4px;
   }
   .messages .message:last-child
@@ -256,7 +256,7 @@ h1 span{
   {
     flex: 0 1 40px;
     width: 100%;
-    background: linear-gradient(120deg, #0f64d3b2, #8b0fd3d7, #f00cb7b9);
+    background: #0f64d3b2;
     padding: 10px;
     position: relative;
   }
@@ -270,11 +270,11 @@ h1 span{
     border-radius: 20px;
     margin: 0;
     padding: 5px 20px 5px 10px;
-    width: 80%;
+    width: 85%;
   }
   ::placeholder
   {
-    color: #063f6db9;
+    color: #063f6dd7;
     opacity: 50%;
   }
   .message-box textarea:focus:-webkit-placeholder
@@ -285,11 +285,11 @@ h1 span{
   {
     position: absolute;
     z-index: 1;
-    right: 40px;
+    right: 20px;
     width: 10%;
     color: #ffffff;
     text-align: center;
-    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background: #029202;
     background-size: 400%;
     font-size: 20px;
     text-transform: uppercase;
@@ -297,6 +297,7 @@ h1 span{
     line-height: 1;
     padding: 14px 18px 14px 18px;
     border-radius: 20px;
+    border-color: #04ac04d3;
   }
   .message-box .message-submit:hover
   {
@@ -323,7 +324,7 @@ h1 span{
       bottom: -5px;
       z-index: -1;
       cursor: pointer;
-      background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+      background: linear-gradient(120deg,#05b605,#06e606,#14fa14,#40ff40);
       background-size: 400%;
       border-radius: 20px;
       opacity: 0;
@@ -347,7 +348,7 @@ h1 span{
   }
   
   .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-    background-color: #06295fa1 !important;
+    background-color: #062a5fb6 !important;
   }
 
   @-webkit-keyframes bounce {
@@ -482,6 +483,6 @@ h1 span{
   {
     cursor: pointer;
     font-size: 24px;
-    color: #00f8cfd7;
+    color: #056405;
     margin: 2px 2px 2px 12px;
   }
