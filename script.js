@@ -1,6 +1,11 @@
 var $messages = $('.messages-content');
 var serverResponse = "";
-
+var checkbox = document.getElementById('checkbox');
+checkbox.addEventListener('change',() => {
+    $(".chat-title").toggleClass("dark-chat-title");
+    $(".messages").toggleClass("dark-messages");
+    $(".message-box").toggleClass("dark-message-box");
+});
 try
 {
     var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -97,12 +102,20 @@ function fetchmsg(){
         if(response.includes("||")) {
             for (text of response.split("||")) {
                 serverMessage(text);
-                speechSynthesis.speak( new SpeechSynthesisUtterance(text))
+                var checkbox1 = document.getElementById('checkbox1');
+                if(checkbox1.checked==true)
+                {
+                    speechSynthesis.speak( new SpeechSynthesisUtterance(text))
+                }
             }
         }
         else {
             serverMessage(response);
-            speechSynthesis.speak( new SpeechSynthesisUtterance(response))
+            var checkbox1 = document.getElementById('checkbox1');
+            if(checkbox1.checked==true)
+            {
+                speechSynthesis.speak( new SpeechSynthesisUtterance(response))
+            }
         }
         })
          .catch(error => console.error('Error h:', error));

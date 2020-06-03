@@ -55,6 +55,16 @@ h1 span{
     text-align: left;
     padding: 10px 10px 10px 50px;
 }
+.dark-chat-title
+{
+    flex: 0 1 45px;
+    position: relative;
+    z-index: 2;
+    background: #000000e0;
+    color: #ffffff;
+    text-align: left;
+    padding: 10px 10px 10px 50px;
+}
 .chat-title h1, .chat-title h2
 {
     font-weight: normal;
@@ -75,6 +85,11 @@ h1 span{
     text-shadow: 1px 1px 2px #053863b7;
     margin-left: 50px;
   }
+  .chat-title h2 span
+  {
+    float: right;
+    text-align: right;
+  }
   .chat-title .robot
   {
       position: absolute;
@@ -89,11 +104,108 @@ h1 span{
       color: #e0dedec2;
       border: 2px solid #f0eaf5a9;
   }
+  .checkbox
+  {
+    opacity: 0;
+    position: absolute;
+  }
+  .checkbox1
+  {
+    opacity: 0;
+    position: absolute;
+  }
+  .checkbox:checked + .label .ball
+  {
+    transform: translateX(24px);
+  }
+  .checkbox1:checked + .label1 .ball1
+  {
+    transform: translateX(30px);
+  }
+  .label
+  {
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 50px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+  }
+  .label1
+  {
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    right: 35px;
+    border-radius: 50px;
+    position: relative;
+    height: 36px;
+    width: 70px;
+  }
+  .ball
+  {
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transition: transform 0.2s linear;
+  }
+  .ball1
+  {
+    background-color: #ffffff;
+    border-radius: 30%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 32px;
+    width: 36px;
+    transition: transform 0.2s linear;
+  }
+  .fa-moon
+  {
+    color: #f1c40f;
+    font-size: 20px;
+    text-shadow: none;
+  }
+  .fa-sun
+  {
+    color: #f39c12;
+    font-size: 20px;
+    text-shadow: none;
+  }
+  .fa-microphone-slash
+  {
+    color: #ffffff;
+    font-size: 20px;
+  }
+  .label1 .fa-microphone
+  {
+    color: #ffffff;
+    font-size: 20px;
+  }
   .messages
   {
       flex: 1 1 auto;
       color: #030303c0;
       background: #fdfdfdb0;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+  }
+  .dark-messages
+  {
+      flex: 1 1 auto;
+      color: #030303c0;
+      background: #000000b6;
       overflow: hidden;
       position: relative;
       width: 100%;
@@ -260,6 +372,14 @@ h1 span{
     padding: 10px;
     position: relative;
   }
+  .dark-message-box
+  {
+    flex: 0 1 40px;
+    width: 100%;
+    background: #000000e0;
+    padding: 10px;
+    position: relative;
+  }
   .message-box .message-input
   {
     border: none;
@@ -289,7 +409,7 @@ h1 span{
     width: 10%;
     color: #ffffff;
     text-align: center;
-    background: #0000a0ab;
+    background: #4f4ff8c5;
     background-size: 400%;
     font-size: 20px;
     text-transform: uppercase;
@@ -297,7 +417,7 @@ h1 span{
     line-height: 1;
     padding: 14px 18px 14px 18px;
     border-radius: 20px;
-    border-color: #0202999f;
+    border-color: #4848fac5;
   }
   .message-box .message-submit:hover
   {
@@ -324,7 +444,7 @@ h1 span{
       bottom: -5px;
       z-index: -1;
       cursor: pointer;
-      background: linear-gradient(120deg,#0953dd,#09aefa,#5be4fc);
+      background: linear-gradient(120deg,#6868ffc5,#09aefa,#5be4fc);
       background-size: 400%;
       border-radius: 20px;
       opacity: 0;
@@ -483,6 +603,6 @@ h1 span{
   {
     cursor: pointer;
     font-size: 24px;
-    color: #0000a0;
+    color: #4f4ff8c5;
     margin: 2px 2px 2px 12px;
   }
