@@ -12,7 +12,7 @@ h1{
     align-items: center;
     height: 10vh;
     font-size: 3em;
-    font-family: 'Cantarell', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 h1 span{
     color: red;
@@ -324,7 +324,7 @@ h1 span{
       bottom: -5px;
       z-index: -1;
       cursor: pointer;
-      background: linear-gradient(120deg,#05b605,#06e606,#14fa14,#40ff40);
+      background: linear-gradient(120deg,#0953dd,#09aefa,#5be4fc);
       background-size: 400%;
       border-radius: 20px;
       opacity: 0;
