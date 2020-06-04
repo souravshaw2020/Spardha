@@ -5,6 +5,7 @@ checkbox.addEventListener('change',() => {
     $(".chat-title").toggleClass("dark-chat-title");
     $(".messages").toggleClass("dark-messages");
     $(".message-box").toggleClass("dark-message-box");
+    $(".fa-microphone").toggleClass("dark-microphone");
 });
 try
 {

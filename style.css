@@ -603,6 +603,13 @@ h1 span{
   {
     cursor: pointer;
     font-size: 24px;
+    color: #0f0f9baf;
+    margin: 2px 2px 2px 12px;
+  }
+  .dark-microphone
+  {
+    cursor: pointer;
+    font-size: 24px;
     color: #4f4ff8c5;
     margin: 2px 2px 2px 12px;
   }
