@@ -9,6 +9,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <style>
+        .button {
+        border: 2px solid #008CBA;
+        border-radius: 25px;
+        color: #008CBA;
+        padding: 5px 15px;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+        transition-duration: 0.2s;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2px 1px;
+        cursor: pointer;
+        }
+        .button:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <div>
@@ -17,7 +37,7 @@
             <h1>WELCOME TO <span>&nbsp;ADMIZZIONZ CAMPUZ</span></h1>
         </div>
         <div class="row" id="bg">
-            <div class="col-12">
+            <div class="col-sm-12">
                 <br><br>
                 <div class="chat-box">
                     <div class="chat-title">
@@ -45,7 +65,11 @@
                         <div class="robot"><i class="fas fa-robot"></i></div>
                     </div>
                     <div class="messages">
+                        <div class="col-sm-12">
                         <div class="messages-content"></div>
+                        </div>
+                    </div>
+                    <div id="popupButtons" class="popupButtons">
                     </div>
                     <form class="message-box" id="mymsg" method="POST">
                         <input type="text" id="MSG" name="MSG" class="message-input" placeholder="Ask Something..." required >

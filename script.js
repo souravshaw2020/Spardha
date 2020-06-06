@@ -1,9 +1,13 @@
 var $messages = $('.messages-content');
 var serverResponse = "";
+var otherResponses = ['Okay','Alright','Of Course','Ok','Sure','Absolutely','Fine'];
+var genResponses = ['Good','Loved it','Amazing','Great','Very Good','Helpful','Nice','Fine enough','Interesting'];
+
 var checkbox = document.getElementById('checkbox');
 checkbox.addEventListener('change',() => {
     $(".chat-title").toggleClass("dark-chat-title");
     $(".messages").toggleClass("dark-messages");
+    $(".popupButtons").toggleClass("dark-popupbuttons");
     $(".message-box").toggleClass("dark-message-box");
     $(".fa-microphone").toggleClass("dark-microphone");
 });
@@ -57,7 +61,7 @@ function insertMessage() {
         return false;
     }
     $('<div class="message message-personal">' + msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
-    fetchmsg()
+    fetchmsg("normal","");
 
     $('.message-input').val(null);
     updateScrollbar();
@@ -65,6 +69,7 @@ function insertMessage() {
 
 document.getElementById("mymsg").onsubmit = (e)=> {
     e.preventDefault()
+    $('#popupButtons').empty();
     insertMessage();
 }
 
@@ -82,15 +87,49 @@ function serverMessage(response2) {
     }, 100);
 }
 
-function fetchmsg(){
+function clickFunction(reply) {
+    msg = reply;
+    $('<div class="message message-personal">' + msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
+    fetchmsg("button",msg);
 
-    var url = 'http://localhost:5000/send-msg';
+    $('#popupButtons').empty();
+    updateScrollbar();
+}
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
+
+function showQuickButtons() {
+    let returnedArray = shuffleArray(otherResponses);
+    document.getElementById('popupButtons').innerHTML = '<button id="button1" class="button" onclick="clickFunction(this.innerHTML)">Yes</button>&nbsp&nbsp&nbsp<button id="button2" class="button" onclick="clickFunction(this.innerHTML)">No</button>&nbsp&nbsp&nbsp<button id="button3" class="button" onclick="clickFunction(this.innerHTML)">' + returnedArray[0] + '</button>&nbsp&nbsp&nbsp<button id="button4" class="button" onclick="clickFunction(this.innerHTML)">' + returnedArray[1] + '</button>';
+}
+
+function showQuickButtonsNew() {
+    let returnedArray = shuffleArray(genResponses);
+    document.getElementById('popupButtons').innerHTML = '<button id="button1" class="button" onclick="clickFunction(this.innerHTML)">' + returnedArray[0] + '</button>&nbsp&nbsp&nbsp<button id="button2" class="button" onclick="clickFunction(this.innerHTML)">' + returnedArray[1] + '</button>&nbsp&nbsp&nbsp<button id="button3" class="button" onclick="clickFunction(this.innerHTML)">' + returnedArray[2] + '</button>&nbsp&nbsp&nbsp<button id="button4" class="button" onclick="clickFunction(this.innerHTML)">' + returnedArray[3] + '</button>';
+}
+
+function fetchmsg(type,message){
+
+    var url = 'http://localhost:3000/send-msg';
      
-     const data = new URLSearchParams();
-     for (const pair of new FormData(document.getElementById("mymsg"))) {
-         data.append(pair[0], pair[1]);
-         console.log(pair)
-     }
+    const data = new URLSearchParams();
+    for (const pair of new FormData(document.getElementById("mymsg"))) {
+        if (type == 'button') {
+            data.append(pair[0], message);
+        }
+        else {
+            data.append(pair[0], pair[1]);
+        }
+        console.log(pair)
+    }
    
      console.log("abc",data)
        fetch(url, {
@@ -98,9 +137,17 @@ function fetchmsg(){
          body:data
        }).then(res => res.json())
        .then(r => {
-        let response = r.Reply;
-        console.log(response);
+        let completeResponse = r.Reply;
+        let intent = (completeResponse.split('$>'))[0];
+        let response = (completeResponse.split('$>'))[1];
+        
         if(response.includes("||")) {
+            if (intent.includes('yes')) {
+                showQuickButtons();
+            }
+            else if(intent.includes('good')) {
+                showQuickButtonsNew();
+            }
             for (text of response.split("||")) {
                 serverMessage(text);
                 var checkbox1 = document.getElementById('checkbox1');
@@ -111,6 +158,12 @@ function fetchmsg(){
             }
         }
         else {
+            if (intent.includes('yes')) {
+                showQuickButtons();
+            }
+            else if(intent.includes('good')) {
+                showQuickButtonsNew();
+            }
             serverMessage(response);
             var checkbox1 = document.getElementById('checkbox1');
             if(checkbox1.checked==true)

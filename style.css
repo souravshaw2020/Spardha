@@ -12,6 +12,7 @@ h1{
     align-items: center;
     height: 10vh;
     font-size: 3em;
+    font-weight: bolder;
     font-family: 'Times New Roman', Times, serif;
 }
 h1 span{
@@ -209,6 +210,16 @@ h1 span{
       overflow: hidden;
       position: relative;
       width: 100%;
+  }
+  .popupButtons
+  {
+    text-align: center;
+    background-color: #fdfdfdb0;
+  }
+  .dark-popupbuttons
+  {
+    text-align: center;
+    background-color: #000000b6;
   }
   .messages .messages-content
   {
