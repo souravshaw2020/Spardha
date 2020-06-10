@@ -77,6 +77,8 @@ h1 span{
   .chat-title h1
   {
     color: #ffffff;
+    justify-content: left;
+    align-items: left;
     text-shadow: 1px 2px 5px #075594;
     margin-left: 60px;
   }
@@ -85,7 +87,7 @@ h1 span{
     color: #ecf0f3b6;
     font-size: 20px;
     text-shadow: 1px 1px 2px #053863b7;
-    margin-left: 70px;
+    margin-left: 60px;
   }
   .chat-title h2 span
   {
@@ -144,7 +146,7 @@ h1 span{
     align-items: center;
     justify-content: space-between;
     padding: 5px;
-    right: 5px;
+    right: 10px;
     border-radius: 50px;
     position: relative;
     height: 36px;
