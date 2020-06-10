@@ -32,17 +32,17 @@
 </head>
 <body>
     <div>
-        <div class="col-12">
+        <div class="col-sm-12">
             <img src="logo.png" alt="logo" align="left">
             <h1>WELCOME TO <span>&nbsp;ADMIZZIONZ CAMPUZ</span></h1>
         </div>
-        <div class="row" id="bg">
+        <div id="bg">
             <div class="col-sm-12">
                 <br><br>
                 <div class="chat-box">
                     <div class="chat-title">
-                        
-                        <h1>AMYBOT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                        <div class="col-sm-12">
+                        <h1>AMYBOT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                             <span>
                                 <input type="checkbox" class="checkbox" id="checkbox">
                                 <label for="checkbox" class="label">
@@ -63,16 +63,21 @@
                             </span>
                         </h2>
                         <div class="robot"><i class="fas fa-robot"></i></div>
+                        </div>
                     </div>
                     <div class="messages">
-                        <div class="messages-content"></div>
+                        <div class="messages-content">
+                            <div class="col-sm-12"></div>
+                        </div>
                     </div>
                     <div id="popupButtons" class="popupButtons">
                     </div>
                     <form class="message-box" id="mymsg" method="POST">
+                        <div class="col-sm-12">
                         <input type="text" id="MSG" name="MSG" class="message-input" placeholder="Ask Something..." required >
                         <i class="fas fa-microphone" id="start-record-btn"></i>
                         <button type="submit" class="message-submit">Send</button>
+                        </div>
                     </form>
                 </div>
             </div>

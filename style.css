@@ -77,14 +77,15 @@ h1 span{
   .chat-title h1
   {
     color: #ffffff;
-      text-shadow: 1px 2px 5px #075594;
+    text-shadow: 1px 2px 5px #075594;
+    margin-left: 60px;
   }
   .chat-title h2 
   {
     color: #ecf0f3b6;
     font-size: 20px;
     text-shadow: 1px 1px 2px #053863b7;
-    margin-left: 50px;
+    margin-left: 70px;
   }
   .chat-title h2 span
   {
@@ -96,7 +97,7 @@ h1 span{
       position: absolute;
       z-index: 1;
       top: 20px;
-      left: 20px;
+      left: 0px;
       border-radius: 30px;
       font-size: 50px;
       overflow: hidden;
@@ -143,7 +144,7 @@ h1 span{
     align-items: center;
     justify-content: space-between;
     padding: 5px;
-    right: 35px;
+    right: 5px;
     border-radius: 50px;
     position: relative;
     height: 36px;
