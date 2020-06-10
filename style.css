@@ -66,7 +66,7 @@ h1 span{
     text-align: left;
     padding: 10px 10px 10px 50px;
 }
-.chat-title h1, .chat-title h2
+.chat-title h2, .chat-title h3
 {
     font-weight: normal;
     font-size: 40px;
@@ -74,22 +74,25 @@ h1 span{
     padding: 0;
     letter-spacing: 1px;
   }
-  .chat-title h1
+  .chat-title h2
   {
     color: #ffffff;
-    justify-content: left;
-    align-items: left;
     text-shadow: 1px 2px 5px #075594;
     margin-left: 60px;
   }
-  .chat-title h2 
+  .chat-title h2 span
+  {
+    float: right;
+    text-align: right;
+  }
+  .chat-title h3 
   {
     color: #ecf0f3b6;
     font-size: 20px;
     text-shadow: 1px 1px 2px #053863b7;
     margin-left: 60px;
   }
-  .chat-title h2 span
+  .chat-title h3 span
   {
     float: right;
     text-align: right;
@@ -98,7 +101,7 @@ h1 span{
   {
       position: absolute;
       z-index: 1;
-      top: 20px;
+      top: 10px;
       left: 0px;
       border-radius: 30px;
       font-size: 50px;
@@ -133,6 +136,8 @@ h1 span{
     align-items: center;
     justify-content: space-between;
     padding: 5px;
+    top: 5px;
+    right: 20px;
     border-radius: 50px;
     position: relative;
     height: 26px;
